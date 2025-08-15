@@ -2,6 +2,13 @@ import numpy as np
 from scipy.optimize import curve_fit
 import matplotlib.pyplot as plt
 
+
+
+# 一、定义函数模型: 难点，建立正确的函数模型
+# 二、通过xlsx导入数据集
+# 三、设置参数的初始值，方便之后的优化
+# 四、通过curve_fit进行拟合
+
 # 1. 定义你的复杂函数 (配方)
 def damped_sine_func(x, a, b, c, d):
     """
@@ -28,7 +35,6 @@ y_data = y_true + noise
 initial_guess = [4, 0.6, 2.2, 0.7]
 
 # 4. === 执行核心拟合命令 ===
-#
 popt, pcov = curve_fit(damped_sine_func, x_data, y_data, p0=initial_guess)
 
 
