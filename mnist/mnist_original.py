@@ -88,7 +88,7 @@ for epoch in range(1, epochs + 1):
 # ==================================================================
 # 7. 【新增】保存训练好的模型
 # ==================================================================
-MODEL_PATH = "mnist/mnist_mlp_model.pth"
+MODEL_PATH = "mnist_mlp_model.pth"
 torch.save(model.state_dict(), MODEL_PATH)
 print(f"模型已成功保存到: {MODEL_PATH}")
 
